@@ -1,0 +1,47 @@
+{
+    "version": "sunmao/v1",
+    "kind": "Application",
+    "metadata": {
+        "name": "login"
+    },
+    "spec": {
+        "components": [
+            {
+                "id": "language_map",
+                "type": "core/v1/dummy",
+                "properties": {},
+                "traits": [
+                    {
+                        "type": "core/v1/state",
+                        "properties": {
+                            "key": "value",
+                            "initialValue": "{{{\n  \"en-US\": \"English\",\n  \"zh-CN\": \"中文\"\n}}}"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "language",
+                "type": "core/v1/dummy",
+                "properties": {},
+                "traits": [
+                    {
+                        "type": "core/v1/localStorage",
+                        "properties": {
+                            "key": "value",
+                            "initialValue": "en-US"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "font11",
+                "type": "custom/v1/font",
+                "properties": {
+                    "text": "SunmaoUI"
+                },
+                "traits": []
+            }
+        ]
+    }
+}

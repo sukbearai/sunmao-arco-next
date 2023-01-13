@@ -13,19 +13,23 @@ export type IRoute = AuthParams & {
 
 export const routes: IRoute[] = [
   {
-    name: 'menu.dashboard',
-    key: 'dashboard',
-    children: [
-      {
-        name: 'menu.dashboard.workplace',
-        key: 'dashboard/workplace',
-      },
-    ],
+    name: 'sunmao',
+    key: 'sunmao',
   },
-  {
-    name: 'Example',
-    key: 'example',
-  },
+  // {
+  //   name: 'menu.dashboard',
+  //   key: 'dashboard',
+  //   children: [
+  //     {
+  //       name: 'menu.dashboard.workplace',
+  //       key: 'dashboard/workplace',
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Example',
+  //   key: 'example',
+  // },
 ];
 
 export const getName = (path: string, routes) => {
