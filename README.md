@@ -7,7 +7,6 @@
 ```
 ├── README
 ├── package.json
-
 ├── src
 |  ├── components  # the common components
 |  |  ├── SunmaoEditor # sunmao editor
