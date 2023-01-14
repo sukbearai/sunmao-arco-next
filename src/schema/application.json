@@ -2,45 +2,350 @@
     "version": "sunmao/v1",
     "kind": "Application",
     "metadata": {
-        "name": "login"
+        "name": "some App"
     },
     "spec": {
         "components": [
             {
-                "id": "language_map",
-                "type": "core/v1/dummy",
-                "properties": {},
-                "traits": [
-                    {
-                        "type": "core/v1/state",
-                        "properties": {
-                            "key": "value",
-                            "initialValue": "{{{\n  \"en-US\": \"English\",\n  \"zh-CN\": \"中文\"\n}}}"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "language",
-                "type": "core/v1/dummy",
-                "properties": {},
-                "traits": [
-                    {
-                        "type": "core/v1/localStorage",
-                        "properties": {
-                            "key": "value",
-                            "initialValue": "en-US"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "font11",
-                "type": "custom/v1/font",
+                "id": "stack7",
+                "type": "core/v1/stack",
                 "properties": {
-                    "text": "SunmaoUI"
+                    "spacing": 12,
+                    "direction": "vertical",
+                    "align": "auto",
+                    "wrap": false,
+                    "justify": "flex-start"
                 },
-                "traits": []
+                "traits": [
+                    {
+                        "type": "core/v1/style",
+                        "properties": {
+                            "styles": [
+                                {
+                                    "styleSlot": "content",
+                                    "style": "box-sizing:border-box;",
+                                    "cssProperties": {
+                                        "width": "100%",
+                                        "height": "",
+                                        "backgroundColor": "#ffffff",
+                                        "paddingLeft": "20px",
+                                        "paddingRight": "20px",
+                                        "paddingTop": "20px",
+                                        "paddingBottom": "20px"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "formControl0",
+                "type": "arco/v1/formControl",
+                "properties": {
+                    "label": {
+                        "format": "plain",
+                        "raw": "这是题目一？"
+                    },
+                    "layout": "vertical",
+                    "required": true,
+                    "hidden": false,
+                    "extra": "",
+                    "errorMsg": "",
+                    "labelAlign": "left",
+                    "colon": false,
+                    "help": "",
+                    "labelCol": {
+                        "span": 3,
+                        "offset": 0
+                    },
+                    "wrapperCol": {
+                        "span": 21,
+                        "offset": 0
+                    }
+                },
+                "traits": [
+                    {
+                        "type": "core/v1/style",
+                        "properties": {
+                            "styles": [
+                                {
+                                    "styleSlot": "content",
+                                    "style": "",
+                                    "cssProperties": {
+                                        "color": ""
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "stack7",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "textArea2",
+                "type": "arco/v1/textArea",
+                "properties": {
+                    "allowClear": false,
+                    "disabled": false,
+                    "defaultValue": "",
+                    "placeholder": "请输入...",
+                    "error": false,
+                    "size": "large",
+                    "autoSize": true,
+                    "updateWhenDefaultValueChanges": false
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "formControl0",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    },
+                    {
+                        "type": "core/v1/style",
+                        "properties": {
+                            "styles": [
+                                {
+                                    "styleSlot": "TextArea",
+                                    "style": "height:200px;",
+                                    "cssProperties": {
+                                        "height": ""
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "formControl3",
+                "type": "arco/v1/formControl",
+                "properties": {
+                    "label": {
+                        "format": "plain",
+                        "raw": "这是题目二？"
+                    },
+                    "layout": "vertical",
+                    "required": true,
+                    "hidden": false,
+                    "extra": "",
+                    "errorMsg": "",
+                    "labelAlign": "left",
+                    "colon": false,
+                    "help": "",
+                    "labelCol": {
+                        "span": 3,
+                        "offset": 0
+                    },
+                    "wrapperCol": {
+                        "span": 21,
+                        "offset": 0
+                    }
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "stack7",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "radio4",
+                "type": "arco/v1/radio",
+                "properties": {
+                    "options": [
+                        {
+                            "label": "A",
+                            "value": "a"
+                        },
+                        {
+                            "label": "B",
+                            "value": "b"
+                        },
+                        {
+                            "label": "C",
+                            "value": "c"
+                        }
+                    ],
+                    "type": "radio",
+                    "defaultCheckedValue": "a",
+                    "direction": "horizontal",
+                    "size": "default",
+                    "updateWhenDefaultValueChanges": false
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "formControl3",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "formControl5",
+                "type": "arco/v1/formControl",
+                "properties": {
+                    "label": {
+                        "format": "plain",
+                        "raw": "这是题目三？"
+                    },
+                    "layout": "vertical",
+                    "required": true,
+                    "hidden": false,
+                    "extra": "",
+                    "errorMsg": "",
+                    "labelAlign": "left",
+                    "colon": false,
+                    "help": "",
+                    "labelCol": {
+                        "span": 3,
+                        "offset": 0
+                    },
+                    "wrapperCol": {
+                        "span": 21,
+                        "offset": 0
+                    }
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "stack7",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "checkbox6",
+                "type": "arco/v1/checkbox",
+                "properties": {
+                    "options": [
+                        {
+                            "label": "A",
+                            "value": "A"
+                        },
+                        {
+                            "label": "B",
+                            "value": "B"
+                        },
+                        {
+                            "label": "C",
+                            "value": "C"
+                        }
+                    ],
+                    "disabled": false,
+                    "direction": "horizontal",
+                    "defaultCheckedValues": [
+                        "checkbox1"
+                    ],
+                    "showCheckAll": false,
+                    "checkAllText": "Check all",
+                    "updateWhenDefaultValueChanges": false
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "formControl5",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "stack10",
+                "type": "core/v1/stack",
+                "properties": {
+                    "spacing": 12,
+                    "direction": "horizontal",
+                    "align": "auto",
+                    "wrap": false,
+                    "justify": "flex-start"
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "stack7",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "button9",
+                "type": "arco/v1/button",
+                "properties": {
+                    "type": "primary",
+                    "status": "default",
+                    "long": false,
+                    "size": "default",
+                    "disabled": false,
+                    "loading": false,
+                    "shape": "square",
+                    "text": "交卷"
+                },
+                "traits": [
+                    {
+                        "type": "core/v2/slot",
+                        "properties": {
+                            "container": {
+                                "id": "stack10",
+                                "slot": "content"
+                            },
+                            "ifCondition": true
+                        }
+                    },
+                    {
+                        "type": "core/v1/style",
+                        "properties": {
+                            "styles": [
+                                {
+                                    "styleSlot": "content",
+                                    "style": "",
+                                    "cssProperties": {
+                                        "width": ""
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     }

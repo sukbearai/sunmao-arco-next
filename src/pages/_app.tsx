@@ -26,6 +26,8 @@ interface RenderConfig {
   arcoTheme?: string;
 }
 
+const clientRoutes = ['LoginPage', 'SunmaoEditor'];
+
 export default function MyApp({
   pageProps,
   Component,
@@ -127,7 +129,7 @@ export default function MyApp({
       >
         <Provider store={store}>
           <GlobalContext.Provider value={contextValue}>
-            {Component.displayName === 'LoginPage' ? (
+            {clientRoutes.find((name) => Component.displayName === name) ? (
               <Component {...pageProps} suppressHydrationWarning />
             ) : (
               <Layout>
