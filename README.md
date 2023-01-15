@@ -49,7 +49,7 @@ $ yarn dev
 
 ## ✨ Documents
 
-[](https://github.com/smartxworks/sunmao-ui/tree/develop/docs/zh)
+[sunmao ui docs](https://github.com/smartxworks/sunmao-ui/tree/develop/docs/zh)
 
 ## 💡 Some ideas
 
