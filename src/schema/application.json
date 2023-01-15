@@ -27,7 +27,7 @@
                                     "cssProperties": {
                                         "width": "100%",
                                         "height": "",
-                                        "backgroundColor": "#ffffff",
+                                        "backgroundColor": "var(--color-bg-2)",
                                         "paddingLeft": "20px",
                                         "paddingRight": "20px",
                                         "paddingTop": "20px",
