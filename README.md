@@ -11,7 +11,6 @@
 |  ├── components  # the common components
 |  |  ├── SunmaoEditor # sunmao editor
 |  |  ├── SunmaoRenderer # sunmao runtime
-|  ├── libs
 |  ├── locale  # i18n
 |  ├── mock
 |  ├── page # page templates
