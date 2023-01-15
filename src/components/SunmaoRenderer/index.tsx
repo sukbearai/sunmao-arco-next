@@ -1,6 +1,6 @@
-import { initSunmaoUI, SunmaoLib } from '@sunmao-ui/runtime';
+import { initSunmaoUI } from '@sunmao-ui/runtime';
 import { type Application, type RuntimeModule } from '@sunmao-ui/core';
-import libs from '@/libs';
+import libs from '@/sunmao/libs';
 
 type Props = {
   application: Application;
