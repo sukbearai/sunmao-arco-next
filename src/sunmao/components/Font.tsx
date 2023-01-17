@@ -42,6 +42,7 @@ export default implementRuntimeComponent({
     exampleSize: [1, 1],
     annotations: {
       category: PRESET_PROPERTY_CATEGORY.Basic,
+      test: 'test',
     },
   },
   spec: {
